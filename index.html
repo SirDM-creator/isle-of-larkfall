@@ -41,7 +41,7 @@ cliffs:{name:"Ashen Cliffs",desc:"Ash drifts across a broken trail above a restl
 lighthouse:{name:"Old Lighthouse",desc:"The dead beacon burns with a light that casts no shadow.",icon:"🗼",scene:"lighthouse",level:4,neighbors:["ruins","cliffs"],npcs:["The Man"]},
 trueLight:{name:"True Lighthouse",desc:"Beyond the scar, the original light waits beneath the island.",icon:"✨",scene:"lighthouse",level:5,neighbors:["lighthouse"],npcs:["The Seal Keeper"]}
 };
-const enemies={Tidebound:{icon:"🦀",hp:42,atk:9,xp:16,gold:8},Mistling:{icon:"👻",hp:35,atk:11,xp:18,gold:10},'Ruins Sentinel':{icon:"🗿",hp:75,atk:15,xp:32,gold:18},Seal Keeper:{icon:"👼",hp:210,atk:18,xp:100,gold:80,boss:true}};
+const enemies={Tidebound:{icon:"🦀",hp:42,atk:9,xp:16,gold:8},Mistling:{icon:"👻",hp:35,atk:11,xp:18,gold:10},'Ruins Sentinel':{icon:"🗿",hp:75,atk:15,xp:32,gold:18},'Seal Keeper':{icon:"👼",hp:210,atk:18,xp:100,gold:80,boss:true}};
 let state={started:false,loc:"town",x:50,y:65,level:1,xp:0,hp:120,maxHp:120,atk:18,def:12,gold:30,inventory:{Potion:3,Ether:1,"Old Copper Key":0,"Angel Feather":0},quests:{town:false,forest:false,ruins:false,feather:false},bossDefeated:false,enemy:null,turn:0,visited:["town"],dialogueFlags:{},ending:null};
 function log(msg){let p=document.createElement("p");p.innerHTML="› "+msg;$("log").prepend(p)}
 function save(){localStorage.setItem("larkfall-save",JSON.stringify(state));log("<span class='gold'>Journey saved.</span>")}
